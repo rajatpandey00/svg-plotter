@@ -69,10 +69,8 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_dom__);
 // const user = {
 //     name: 'Rajat',
 //     cities: ['Lucknow', 'Kanpur', 'Sydney', 'Bangalore'],
@@ -87,10 +85,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-var template = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h1', null, 'Something Interesting and New Happening is Really going to ME!!');
+var template = 'Something happened and showing on screen!!!!';
 var appRoot = document.getElementById('root');
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(template, appRoot);
+__WEBPACK_IMPORTED_MODULE_0_react_dom___default.a.render(template, appRoot);
 
 /***/ }),
 /* 1 */

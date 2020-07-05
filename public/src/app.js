@@ -10,9 +10,8 @@
 
 // user.printCitiesILived();
 
-import React from 'react'
 import ReactDOM from 'react-dom'
 
-var template = React.createElement('h1', null, 'Something Interesting and New Happening is Really going to ME!!');
+var template = 'Something happened and showing on screen!!!!';
 var appRoot = document.getElementById('root');
 ReactDOM.render(template, appRoot);
