@@ -1,34 +1,47 @@
 import React from 'react';
 
-const SVG = (props) => {
+const SVG = props => {
+    const cords = props.cords && props.cords.trim().split(" ");
     const polyType = props.type;
-    console.log('props', props);
     switch (polyType) {
         case 'p':
-            return (
-                <div>
-                    <svg width="250px" height="250px">
-                        <polygon points="100,10 150,90 60,110 10,20" fill="green" />
-                    </svg>
-                </div>
-            );
+            {
+                console.log('Cors', cords.length)
+                if (cords.length <= 2) {
+                    props.setError("Polygon can only be constructed for more than two co-ordinates");
+                    return null;
+                } else {
+                    props.setError(null);
+                    return (
+                        <polygon points={cords} fill={'#' + Math.random().toString(16).substr(2, 6)} />
+                    );
+                }
+            }
         case 'r':
-            return (
-                <div>
-                    <svg width="250px" height="250px">
-                        <rect x="0" y="10" width="100" height="50" fill="red" />
-                    </svg>
-                </div>
-            );
+            {
+                if (!(cords[0] && cords[1] && cords[2] && cords[3])) {
+                    props.setError("Please pass on correct set of parameters for SVG of type r");
+                    return null;
+                } else {
+                    props.setError(null);
+                    return (
+                        <rect x={cords[0]} y={cords[1]} width={cords[2]} height={cords[3]} fill={'#' + Math.random().toString(16).substr(2, 6)} />
+                    );
+                }
+            }
 
         case 'c':
-            return (
-                <div>
-                    <svg width="250px" height="250px">
-                        <circle cx="50" cy="50" r="50" fill="orange" />
-                    </svg>
-                </div>
-            );
+            {
+                if (!(cords[0] && cords[1] && cords[2])) {
+                    props.setError("Please pass on correct set of parameters for SVG of type c");
+                    return null
+                } else {
+                    props.setError(null);
+                    return (
+                        <circle cx={cords[0]} cy={cords[1]} r={cords[2]} fill={'#' + Math.random().toString(16).substr(2, 6)} />
+                    );
+                }
+            }
         default:
             return null;
     }

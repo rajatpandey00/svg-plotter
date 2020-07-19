@@ -5,4 +5,4 @@ import create from './components/SVGCreate'
 import data from './components/data'
 
 const appRoot = document.getElementById('root');
-ReactDOM.render(<SVGContainer children={create(data)} />, appRoot);
+ReactDOM.render(<SVGContainer />, appRoot);
